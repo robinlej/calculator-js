@@ -30,3 +30,4 @@
 ## Shortcomings
 
 - This uses loads of Regex, which means that recursive expressions are not possible. Thus, expressions such as "*(2\*(2+3))^(2^(2\*(2-4)))*" (with nested parentheses and/or powers of powers) will break the poor machine. Please be gentle with it.
+- Long expressions wider than the calculator screen are stuck to the left, so you don't see the last characters. I tried to add `direction: rtl;` in the CSS, but this messes with the operation.
