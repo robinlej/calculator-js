@@ -4,14 +4,14 @@
 
 **Functionalities**
 
-- Keyboard support (including / in Firefox)
+- **Keyboard support** (including / in Firefox)
 - Brackets, powers, square roots
-- Clear and backspace options
-- Currency converter (currency rates fetched from an API), weight converter, temperature converter
+- **Clear** and **backspace** options
+- **Currency converter** (currency rates fetched **from an API**), weight converter, temperature converter
 - Multiplication when no operator is given before or after brackets and before square roots *(e.g.: (1+2)3 = (1+2)\*3)*
-- Logs of the previous calculations
-- Navigation with up and down arrows in the previous calculations
-- Entering a number after typing or pressing = starts a new calculation (removes the one currently on the screen)
+- **Logs** of the previous calculations
+- **Navigation with up and down** arrows in the previous calculations
+- Entering a number after typing or pressing "=" starts a new calculation (removes the one currently on the screen)
 
 **Bug-proof**
 
