@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height:100vh;
+    font-family: sans-serif;
+    color: #3D3D3D;
+}
+
+.logs {
+    align-self: flex-start;
+}
+
+.logs li {
+    line-height: 1.7;
+}
+
+main {
+    max-width:1050px;
+    margin-inline:auto;
+    margin-block: 2rem;
+    display: grid;
+    grid-template-columns: repeat(5, 4rem);
+    grid-template-rows: 6rem 6rem;
+    grid-auto-rows: 4rem;
+    gap: .5em;
+    justify-content: center;
+    align-items: center;
+    padding:1rem 2rem 2rem 2rem;
+    background:linear-gradient(to bottom right, rgba(0 0 0 / .3) 0%, rgba(0 0 0 / .8) 50%);
+    border-radius:10px;
+    outline: 2px rgba(0 0 0 / .4) outset;
+    box-shadow: 5px 0 15px rgba(0 0 0 / .3);
+}
+
+input {
+    grid-column: 1 / -1;
+    padding: 1rem;
+    text-align: right;
+    background:rgb(230, 230, 230);
+    color: rgb(61, 61, 61);
+    height:100%;
+}
+
+.calculation-display {
+    grid-row: 1;
+    font-size: 1rem;
+    margin-bottom:-2rem;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.result-display {
+    grid-row: 2;
+    margin-top:0;
+    margin-bottom:2rem;
+    font-size: 2rem;
+    max-width:100%;
+    border-top:none;
+    border-radius: 0 0 5px 5px;
+}
+
+button {
+    padding: 1em;
+    font-size: 1.2rem;
+    font-weight:bold;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    cursor:pointer;
+    outline: 1px outset;
+    height:100%;
+}
+
+button:hover,
+button:focus {
+    background-color: #f8f8f8;
+}
+
+button.operator {
+    color: hsl(16, 100%, 40%);
+    background-color: hsl(16, 80%, 90%);
+}
+
+button.operator:hover,
+button.operator:focus {
+    background-color: hsl(16, 80%, 93%);
+}
+
+button.equal {
+    color: hsl(120, 100%, 15%);
+    background-color:hsl(120, 80%, 85%);
+}
+
+button.equal:hover,
+button.equal:focus {
+    background-color:hsl(120, 80%, 90%);
+}
+
+button.converter {
+    font-size: .8rem;
+    /* aspect-ratio: 1; */
+    background-color: #252525;
+    color:white;
+}
+
+button.converter:hover,
+button.converter:focus {
+    background-color: hsl(0, 0%, 20%);
+}
+
+button.undo {
+    grid-column: span 2;
+    color: hsl(0, 100%, 30%);
+    background-color: hsl(0, 70%, 90%);
+}
+
+button.undo:hover,
+button.undo:focus {
+    background-color: hsl(0, 70%, 93%);
+}
+
+
+@media screen and (max-width: 500px) {
+    main {
+        grid-template-columns: repeat(5, 3rem);
+    }
+
+    button {
+        font-size:1rem;
+    }
+
+    button.converter {
+        font-size: .7rem;
+        /* max-height:100%; */
+    }
+}
